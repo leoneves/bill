@@ -1,0 +1,46 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+
+	<id>assemplyBill</id>
+	<formats>
+		<format>jar</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<dependencySets>
+		<dependencySet>
+			<unpack>true</unpack>
+			<scope>runtime</scope>
+			<excludes>
+				<exclude>javax.servlet:servlet-api</exclude>
+				<exclude>javax.servlet.jsp:jsp-api</exclude>
+			</excludes>
+			<unpackOptions>
+				<excludes>
+					<exclude>**/spring*</exclude>
+					<exclude>**/fmt*</exclude>
+					<exclude>**/c*</exclude>
+					<exclude>**/sql*</exclude>
+					<exclude>**/x*</exclude>
+					<exclude>**/assemblyBill.xml</exclude>
+					<exclude>**/web-fragment.xml</exclude>
+					<exclude>**/permit*</exclude>
+					<exclude>**/fn*</exclude>
+					<exclude>**/*.txt</exclude>
+					<exclude>**/script*</exclude>
+				</excludes>
+			</unpackOptions>
+		</dependencySet>
+	</dependencySets>
+	<files>
+		<file>
+			<source>pom.xml</source>
+			<outputDirectory>/</outputDirectory>
+		</file>
+		<file>
+			<source>src/main/resources/web-fragment.xml</source>
+			<outputDirectory>/META-INF</outputDirectory>
+		</file>
+	</files>
+</assembly>

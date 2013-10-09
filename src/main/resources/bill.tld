@@ -1,0 +1,45 @@
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+    
+    <description>BootStrap Bill</description>
+    <display-name>Bill</display-name>
+    <tlib-version>1.2</tlib-version>
+	<short-name>bill</short-name>
+	<uri>http://bill.br</uri>
+	
+	<tag>
+		<description>Botão ajax</description>	
+		<name>ajaxButton</name>
+		<tag-class>br.org.bill.taglibs.AjaxButton</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>fragment</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+	  		<name>url</name>
+	  		<required>true</required>
+	  	</attribute>
+	</tag>
+	
+	<tag>
+		<description>javascript do bill</description>
+		<name>javascriptBill</name>
+		<tag-class>br.org.bill.taglibs.JavaScriptBill</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+	
+	<tag>
+		<description>css do bill</description>
+		<name>cssBill</name>
+		<tag-class>br.org.bill.taglibs.CSSBill</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+	
+</taglib>     
