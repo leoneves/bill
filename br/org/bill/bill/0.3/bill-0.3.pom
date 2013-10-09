@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.org.bill</groupId>
 	<artifactId>bill</artifactId>
-	<version>0.2</version>
+	<version>0.3</version>
 	<name>bill</name>
 	<url>http://maven.apache.org</url>
 	<properties>
